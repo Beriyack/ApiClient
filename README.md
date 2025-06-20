@@ -44,7 +44,7 @@ La classe `ApiClient` fournit des méthodes statiques pour chaque type de requê
 ### Récupérer des données (GET)
 
 ```php
-use Beriyack\ApiClient; // Ou VotreNamespace\ApiClient si vous avez défini un namespace
+use Beriyack\ApiClient;
 
 try {
     $data = ApiClient::get('[https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)');
