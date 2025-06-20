@@ -47,7 +47,7 @@ La classe `ApiClient` fournit des méthodes statiques pour chaque type de requê
 use Beriyack\ApiClient;
 
 try {
-    $data = ApiClient::get('[https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)');
+    $data = ApiClient::get('https://jsonplaceholder.typicode.com/posts/1');
     print_r($data);
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
@@ -65,7 +65,7 @@ try {
         'body' => 'Contenu de mon nouveau post.',
         'userId' => 1
     ];
-    $response = ApiClient::post('[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)', $newPost);
+    $response = ApiClient::post('https://jsonplaceholder.typicode.com/posts', $newPost);
     print_r($response);
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
@@ -84,7 +84,7 @@ try {
         'body' => 'Nouveau contenu pour le post.',
         'userId' => 1
     ];
-    $response = ApiClient::put('[https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)', $updatedPost);
+    $response = ApiClient::put('https://jsonplaceholder.typicode.com/posts/1', $updatedPost);
     print_r($response);
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
@@ -97,7 +97,7 @@ try {
 use Beriyack\ApiClient;
 
 try {
-    $response = ApiClient::delete('[https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)');
+    $response = ApiClient::delete('https://jsonplaceholder.typicode.com/posts/1');
     print_r($response); // Souvent vide ou un objet vide pour une suppression réussie
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
@@ -116,7 +116,7 @@ try {
         CURLOPT_TIMEOUT => 10, // Timeout de 10 secondes
         CURLOPT_SSL_VERIFYPEER => false // ATTENTION: À utiliser avec précaution et jamais en production sans bonne raison !
     ];
-    $data = ApiClient::get('[https://some-api.com/data](https://some-api.com/data)', $options);
+    $data = ApiClient::get('https://some-api.com/data', $options);
     print_r($data);
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
