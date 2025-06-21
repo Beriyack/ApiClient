@@ -16,14 +16,17 @@ Une bibliothèque PHP simple et efficace pour interagir avec des API RESTful, co
 
 ## 🛠️ Installation
 
-Cette bibliothèque est autonome et ne nécessite aucune dépendance externe (hors les extensions PHP standards comme `cURL`).
+Cette bibliothèque est conçue pour être facilement installable via Composer. 
+Elle nécessite les extensions PHP standards comme `cURL`.
 
-1.  **Assurez-vous d'avoir Composer installé**. Si ce n'est pas le cas, suivez les instructions sur [getcomposer.org](https://getcomposer.org/).
+1.  **Exigence :** Assurez-vous d'avoir [Composer](https://getcomposer.org/) installé sur votre système.
 2.  **Ajoutez la dépendance** à votre projet via Composer :
 
     ```bash
     composer require beriyack/apiclient
     ```
+
+    Cela installera la librairie dans votre dossier `vendor/` et mettra à jour l'autoloader de Composer.
 
 3.  **Utilisez l'autoloader de Composer** dans votre projet :
 
@@ -37,9 +40,9 @@ Cette bibliothèque est autonome et ne nécessite aucune dépendance externe (ho
 
 ---
 
-## 🚀 Utilisation
+## 📖 Utilisation
 
-La classe `ApiClient` fournit des méthodes statiques pour chaque type de requête HTTP.
+Toutes les méthodes de la classe `ApiClient` sont statiques pour chaque type de requête HTTP, ce qui les rend faciles à appeler directement.
 
 ### Récupérer des données (GET)
 
@@ -127,7 +130,7 @@ try {
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! Si vous avez des idées d'améliorations, des corrections de bugs ou de nouvelles fonctionnalités, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+Les contributions sont les bienvenues \! Si vous avez des idées d'améliorations, de nouvelles fonctionnalités ou des corrections de bugs, n'hésitez pas à ouvrir une *issue* ou à soumettre une *pull request*.
 
 ---
 
